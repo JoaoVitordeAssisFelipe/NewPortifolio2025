@@ -1,721 +1,878 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio - João vitor</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>João Vitor · Desenvolvedor Backend Java</title>
+    <meta name="description"
+        content="Portfólio de João Vitor, Analista de Sistemas e Desenvolvedor Backend. Java, Spring Boot, APIs REST e bancos de dados relacionais.">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph (pré-visualização em LinkedIn, WhatsApp etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jvfportifolio.com.br/">
+    <meta property="og:title" content="João Vitor · Desenvolvedor Backend Java">
+    <meta property="og:description" content="APIs e sistemas backend com Java, Spring Boot e bancos de dados relacionais.">
+    <meta property="og:image" content="https://jvfportifolio.com.br/img/92281977.jpeg">
+
+    <link rel="icon" href="icons/coffee-cups.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Marca que o JS está ativo: as animações de entrada só escondem o conteúdo quando há JS para revelá-lo -->
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/icons/coffee-cups.png" alt="Logo de uma xícara de café" width="50px">
-            <h1>João Vitor</h1>
-        </div>
+    <!-- Sprite de ícones: cada ícone é definido uma vez e reutilizado com <use href="#i-..."> -->
+    <svg xmlns="http://www.w3.org/2000/svg" hidden>
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="3" />
+            <path d="m22 7-10 6L2 7" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+        </symbol>
+        <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7" /><path d="M8 7h9v9" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5" />
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="3" /><path d="M16 2v4M8 2v4M3 10h18" />
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="3" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        </symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10 12 5 2 10l10 5 10-5Z" /><path d="M6 12v5c3 2.5 9 2.5 12 0v-5" />
+        </symbol>
+        <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6" /><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11" />
+        </symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 2 10 5-10 5L2 7l10-5Z" /><path d="m2 17 10 5 10-5" /><path d="m2 12 10 5 10-5" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" />
+        </symbol>
+        <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+        </symbol>
+        <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
+        </symbol>
+        <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z" /><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" />
+        </symbol>
+    </svg>
 
-        <!-- Botão Hamburguer -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <!-- Navbar -->
-        <nav class="navbar" id="navbar">
-            <a href="#home">Sobre</a>
-            <a href="#experience">Experiência</a>
-            <a href="#projects">Projetos</a>
-            <a href="#education">Formação</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <!-- ============================== NAVEGAÇÃO ============================== -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="brand">João Vitor</a>
+
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#stack">Stack</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#formacao">Formação</a>
+                <a href="#contato" class="nav-cta">Contato</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section id="home">
-            <div class="apresentacao">
-                <img src="/img/92281977.jpeg" alt="Foto de perfil de João Vitor" id="profile">
-                <h1>João Vitor</h1>
-                <p id="languageProgran">Desenvolvedor Back-End | Spring Boot</p>
-                <p id="text">Especialista no desenvolvimento de APIs robustas e escaláveis com Spring Boot,
-                    microserviços e arquiteturas modernas. Transformo ideias em soluções tecnológicas eficientes.</p>
-            </div>
 
-            <div class="butons">
-                <a href="/assets/curriculo_joao_vitor_2025.pdf" download class="btn" id="contact">
-                    <img src="/icons/download.png" alt="Ícone de download" width="20px"> Currículo
-                </a>
-                <a href="#projects" class="btn" id="projetos">Projetos</a>
-            </div>
+    <main id="conteudo">
 
-            <div class="redesSociais">
-                <a href="https://github.com/JoaoVitordeAssisFelipe" target="_blank"><img
-                        src="/icons/icons8-github-90.png" alt="Ícone do GitHub" width="40px"></a>
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-felipe-929820198/" target="_blank"><img
-                        src="/icons/icons8-linkedin-50 (1).png" alt="Ícone do LinkedIn" width="40px"></a>
-                <a href="https://wa.me/+5534997669283?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Vitor!%20%0AEncontrei%20seu%20contato%20no%20seu%20portf%C3%B3lio%20e%20gostei%20muito%20dos%20seus%20projetos.%20Gostaria%20de%20conversar%20sobre%20seu%20perfil%20e%20poss%C3%ADveis%20oportunidades."
-                    target="_blank"><img src="/icons/icons8-whatsapp-60.png" alt="Ícone do WhatsApp" width="40px"></a>
+        <!-- ============================== HERO ============================== -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <figure class="hero-photo" data-reveal>
+                    <img src="img/92281977.jpeg" alt="Foto de João Vitor" width="160" height="160" fetchpriority="high">
+                </figure>
+
+                <p class="hero-eyebrow" data-reveal style="--d: 80ms">Analista de Sistemas · Desenvolvedor Backend</p>
+                <h1 id="hero-title" data-reveal style="--d: 140ms">João Vitor</h1>
+                <p class="hero-headline" data-reveal style="--d: 200ms">
+                    APIs e sistemas backend em <span class="text-gradient">Java e Spring Boot.</span>
+                </p>
+                <p class="hero-lead" data-reveal style="--d: 260ms">
+                    Gosto de código organizado, bem testado e fácil de manter. Venho da infraestrutura de TI,
+                    então penso no sistema também depois que ele vai para produção.
+                </p>
+
+                <div class="hero-actions" data-reveal style="--d: 320ms">
+                    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+                    <a href="assets/curriculo_joao_vitor_2025.pdf" class="btn-link" download>
+                        Baixar currículo <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                    </a>
+                </div>
+
+                <ul class="hero-social" aria-label="Links profissionais" data-reveal style="--d: 380ms">
+                    <li>
+                        <a href="https://github.com/JoaoVitordeAssisFelipe" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg aria-hidden="true"><use href="#i-github"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-felipe-929820198/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:jaovitordeassis@gmail.com" aria-label="E-mail">
+                            <svg aria-hidden="true"><use href="#i-mail"></use></svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-    </main>
+        <!-- ============================== SOBRE ============================== -->
+        <section class="section section-alt" id="sobre" aria-labelledby="sobre-title">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 id="sobre-title">Sobre mim.</h2>
+                </header>
 
-    <section id="about">
-        <div class="about-container">
-            <h2>Sobre Mim</h2>
-            <p class="subtitle">Desenvolvedor Java com paixão por criar soluções robustas e escaláveis</p>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Profissional em transição de carreira para a área de desenvolvimento de software, com 2
-                        anos de experiência prática em projetos pessoais utilizando Java, Spring Boot e MySQL.
-                        Cursando o 7º período de Ciência da Computação e com formação técnica em
-                        Desenvolvimento de Sistemas pelo SENAI.
-                    </p>
-                    <p>
-                        Atualmente, atuo com Suporte de TI N2, com
-                        experiência em SQL e Oracle Database. Busco ativamente minha primeira oportunidade
-                        como desenvolvedor para contribuir com minhas habilidades de resolução de problemas,
-                        aprendizado rápido e colaboração em equipe.
-                    </p>
-
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <img src="/icons/java.svg" alt="Ícone Java" class="skill-icon">
-                                <span>Java</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 95%;"></span></div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <img src="/icons/poder.svg" alt="Ícone Spring Boot" class="skill-icon">
-                                <span>Spring Boot</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 50%;"></span></div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <img src="/icons/mysql.svg" alt="Ícone mysql" class="skill-icon">
-                                <span>MySQL</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 85%;"></span></div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <img src="/icons/circulo-de-nuvem-de-banco-de-dados.svg" alt="Ícone sql"
-                                    class="skill-icon">
-                                <span>SQL</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 88%;"></span></div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <img src="/icons/base-de-dados.svg" alt="Ícone Microsserviços" class="skill-icon">
-                                <span>Microsserviços</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 88%;"></span></div>
-                        </div>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <p class="about-lead">Sou desenvolvedor Java e trabalho com tecnologia desde 2023.</p>
+                        <p>
+                            Comecei no suporte e na infraestrutura de TI. Lá passei a escrever consultas em
+                            <strong>Oracle SQL</strong>, manter interfaces do ERP Sankhya e automatizar processos
+                            internos. Foi esse contato diário com sistemas reais que me levou para o desenvolvimento.
+                        </p>
+                        <p>
+                            Hoje meu foco é backend: APIs REST com <strong>Spring Boot</strong>, persistência com JPA,
+                            testes com JUnit e Mockito e uma boa separação de camadas. Sou bacharel em
+                            Ciência da Computação e técnico em Desenvolvimento de Sistemas pelo SENAI.
+                        </p>
+                        <p>
+                            Desde março de 2026 sou <strong>Analista de Sistemas</strong> na Start Urbanismo, onde
+                            desenvolvo e mantenho aplicações web, integrações via API e Webhooks e melhorias em
+                            sistemas legados.
+                        </p>
                     </div>
-                </div>
 
-                <div class="about-tech">
-                    <div class="tech-card">
-                        <h3>Tecnologias & Ferramentas</h3>
-                        <div class="tech-grid">
-                            <span class="tech-pill">Java 17+</span>
-                            <span class="tech-pill">Spring Boot</span>
-                            <span class="tech-pill">Spring Security</span>
-                            <span class="tech-pill">Spring Data JPA</span>
-                            <span class="tech-pill">PostgreSQL</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">Docker</span>
-                            <span class="tech-pill">Kubernetes</span>
-                            <span class="tech-pill">Apache Kafka</span>
-                            <span class="tech-pill">Maven</span>
-                            <span class="tech-pill">Gradle</span>
-                            <span class="tech-pill">JUnit</span>
-                            <span class="tech-pill">Git</span>
-                        </div>
-                    </div>
+                    <ul class="facts" data-reveal style="--d: 120ms">
+                        <li>
+                            <span class="fact-icon"><svg aria-hidden="true"><use href="#i-briefcase"></use></svg></span>
+                            <span><small>Atualmente</small>Analista de Sistemas na Start Urbanismo</span>
+                        </li>
+                        <li>
+                            <span class="fact-icon"><svg aria-hidden="true"><use href="#i-layers"></use></svg></span>
+                            <span><small>Foco</small>Backend Java, APIs REST e bancos relacionais</span>
+                        </li>
+                        <li>
+                            <span class="fact-icon"><svg aria-hidden="true"><use href="#i-cap"></use></svg></span>
+                            <span><small>Formação</small>Bacharel em Ciência da Computação (2026)</span>
+                        </li>
+                        <li>
+                            <span class="fact-icon"><svg aria-hidden="true"><use href="#i-pin"></use></svg></span>
+                            <span><small>Localização</small>Uberlândia, MG</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <div class="projects-container">
-            <h2>Meus Projetos</h2>
-            <p class="subtitle">Alguns dos projetos que desenvolvi aplicando as melhores práticas e tecnologias modernas
-            </p>
+        <!-- ============================== STACK ============================== -->
+        <section class="section" id="stack" aria-labelledby="stack-title">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 id="stack-title">Stack.</h2>
+                    <p class="section-sub">As ferramentas que uso para construir, testar e entregar software.</p>
+                </header>
 
-            <div class="projects-grid">
-                
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/mongodb.png" alt="Imagem xadrez">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Workshop Java, SpringBoot e MongoDB</h3>
-                        <p>O sistema permite o gerenciamento de Usuários, Postagens e Comentários, aplicando boas práticas de arquitetura em camadas e modelagem de dados orientada a documentos.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">MVC</span>
-                            <span class="tech-tag">SpringBoot</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/curso-workshop-springboot4-mongodb" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/xadrez.png" alt="Imagem xadrez">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Chess Match - Jogo de Xadrez Java</h3>
-                        <p>Este projeto consiste na implementação completa de um jogo de xadrez em Java.
-                            O principal objetivo do projeto é aplicar, na prática, os conceitos essenciais da Programação Orientada a Objetos (POO), simulando fielmente as regras oficiais do jogo de xadrez.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java 17+</span>
-                            <span class="tech-tag">MVC</span>
-                            <span class="tech-tag">Library</span>
-                            <span class="tech-tag">Stream</span>
-                            <span class="tech-tag">Tratamento de exceções</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/chess-system-java" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/img-projec-sistema-banco.png" alt="Imagem crm-com-springboot">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Sistema Bancário API</h3>
-                        <p>API RESTful desenvolvida para simular as operações essenciais de um banco digital. O sistema gerencia o cadastro de clientes (Pessoa Física e Jurídica), agências e contas bancárias, além de processar transações financeiras como depósitos e transferências entre contas, gerando um histórico (extrato) detalhado e imutável.
-                            O projeto foi construído seguindo as melhores práticas de desenvolvimento, incluindo Clean Code, SOLID, tratamento global de exceções e o padrão DTO para proteção da integridade dos dados e segurança da API.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java 17+</span>
-                            <span class="tech-tag">Spring Boot 3</span>
-                            <span class="tech-tag">Spring Data JPA</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bean Validation</span>
-                            <span class="tech-tag">Lombok</span>
-                            <span class="tech-tag">SpringDoc OpenAPI (Swagger)</span>
-                            <span class="tech-tag">JUnit 5 & Mockito</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/API-Sistema-Banc-rio" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/crm.png" alt="Imagem crm-com-springboot">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>CRM-Basic com Spring Boot</h3>
-                        <p>O CRM-Basic é um projeto de demonstração desenvolvido em Spring Boot 3 que implementa um CRUD
-                            (Create, Read, Update, Delete) para gestão de clientes e seus respectivos contatos. O foco
-                            deste projeto é demonstrar a arquitetura em camadas (Controller, Service, Repository) e a
-                            aplicação de boas práticas de desenvolvimento, como o uso de DTOs (Data Transfer Objects) e
-                            testes unitários.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Spring Boot 3.x</span>
-                            <span class="tech-tag">Spring Data JPA</span>
-                            <span class="tech-tag">H2 Database</span>
-                            <span class="tech-tag">Mockito</span>
-                            <span class="tech-tag">DTOs</span>
-                            <span class="tech-tag">Jakarta Bean Validation</span>
-                            <span class="tech-tag">JUnit 5</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/BASIC-CRM-JAVA" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/virtualClassroom.png" alt="Imagem crm-com-springboot">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3> Virtual Classroom FullStack</h3>
-                        <p>Este projeto é uma aplicação Full Stack desenvolvida para gerenciar e simular as operações
-                            essenciais de um ambiente escolar, incluindo cadastro de pessoas, turmas e registro de
-                            desempenho acadêmico (notas).</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java 21+ & Spring Boot 3</span>
-                            <span class="tech-tag">Spring Data JPA / H2</span>
-                            <span class="tech-tag">Lombok</span>
-                            <span class="tech-tag">HTML5/CSS3 & Vanilla JS</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/VirtualClassroom" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/todolist-fullStack.png" alt="Imagem do projeto Sistema de Gestão de Tarefas">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>To-Do List com Java Spring Boot e MySQL</h3>
-                        <p>Projeto Full-Stack de uma aplicação de Lista de Tarefas (To-Do List), desenvolvido como parte
-                            de um estudo aprofundado em tecnologias Java para o backend e desenvolvimento web básico
-                            para o frontend.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">Spring Data JPA</span>
-                            <span class="tech-tag">JUnit 5</span>
-                            <span class="tech-tag">Mockito</span>
-                            <span class="tech-tag">Spring Boot Test (com @WebMvcTest e @SpringBootTest)</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScrip</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/fullstack-todolist-java"
-                                target="_blank"><img src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/lunarcoprimg.jpeg" alt="Imagem do projeto">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Lunar Corp</h3>
-                        <p>Aplicação web desenvolvida em Java com Spring Boot, com foco na gestão de chamados técnicos
-                            entre usuários e profissionais de suporte.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">JPA (Hibernate)</span>
-                            <span class="tech-tag">Bean Validation (Jakarta)</span>
-                            <span class="tech-tag">Spring MVC, Postman, Fetch/JS</span>
-                            <span class="tech-tag">@RestControllerAdvice, DTOs</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/LunarCorp" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/projetMarket.png" alt="Imagem do projeto Sistema de Gestão de Tarefas">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Projeto de gerenciamento de registro de produtos</h3>
-                        <p>sistema desenvolvido com Spring Boot para o gerenciamento de produtos de um supermercado. A
-                            API permite cadastrar, listar, atualizar e excluir produtos armazenados em um banco de dados
-                            MySQL.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">Spring Data JPA</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/MarketSystem/tree/main"
-                                target="_blank"><img src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/mvcIMC.jpg" alt="Imagem do projeto">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Cálculo do IMC</h3>
-                        <p>Sistema para cálculo do IMC desenvolvido em Java, utilizando o framework Swing para criar uma
-                            interface gráfica. O projeto foi desenvolvido
-                            para fins acadêmicos na faculdade, com o objetivo de aplicar conceitos de programação.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">MVC</span>
-                            <span class="tech-tag">Framework Swing</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/IMC-JavaSwing" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/projectCinema.png" alt="Imagem do projeto">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Gestão de Cinema</h3>
-                        <p>Este projeto simula um sistema de gerenciamento de cinema utilizando conceitos fundamentais
-                            de POO.
-                            O objetivo é estruturar as principais funcionalidades de um cinema,
-                            como gerenciamento de salas, exibição de filmes e controle de espectadores.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">OOP</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/Cinema" target="_blank"><img
-                                    src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <img src="/img/postgrelSQL.png" alt="Imagem do projeto">
-                        <span class="status-badge status-concluido">Concluído</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Registro de Acesso</h3>
-                        <p>Projeto acadêmico realizado durante meu curso técnico. O projeto utilizou PostgreSQL com o
-                            objetivo de criar um
-                            banco de dados que armazenasse os registros de uma catraca de acesso a uma instituição de
-                            ensino.</p>
-                        <div class="card-tech-tags">
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Banco de Dados</span>
-                            <span class="tech-tag">Modelagem de Dados</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/JoaoVitordeAssisFelipe/Banco-de-Dados-/tree/main"
-                                target="_blank"><img src="/icons/icons8-github-30.png" alt="Ícone de código">
-                                Código</a>
-                            <!--<a href="#" target="_blank"><img src="/icons/demo-icon.svg" alt="Ícone de demo"> Demo</a>-->
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="experience-container">
-            <h2>Experiência <span>Profissional</span></h2>
-            <p class="subtitle">Minha trajetória profissional e as contribuições que fiz em cada posição</p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <article class="experience-card">
-                        <div class="card-body">
-                            <h3>Suporte de TI N2</h3>
-                            <div class="company-info">
-                                <span><img src="/img/DSS.jpeg" alt="Ícone de empresa" width="120px">DSS Tecnologia da
-                                    Informação</span>
-                                <span>| Junho 2025 - momento</span>
-                            </div>
-                            <ul>
-                                <li>Prestação de suporte técnico especializado (N2) para a (DITEC) Divisão de Tecnologia
-                                    e Segurança da Informação da Receita Federal do Brasil (RFB).</li>
-                                <li>Preparação, configuração e implantação de estações de trabalho e softwares para
-                                    usuários.</li>
-                                <li>Diagnóstico, manutenção e reparo de hardware, incluindo desktops, notebooks e
-                                    periféricos.</li>
-                                <li>Suporte na configuração e resolução de problemas em redes de computadores.</li>
-                                <li>Atendimento e resolução de incidentes e requisições de usuários através de sistema
-                                    de chamados.</li>
-                            </ul>
-                        </div>
-                        <footer class="card-footer">
-                            <div class="card-tech-tags">
-                                <span class="tech-tag">Redes de Computadores</span>
-                                <span class="tech-tag">Hardware</span>
-                                <span class="tech-tag">Softwares</span>
-                                <span class="tech-tag">Segurança da Informação</span>
-                            </div>
-                        </footer>
+                <!--
+                    Componente .stack-card: título + grade de .tech (logo + nome) + chips opcionais.
+                    .spotlight ativa o brilho que segue o cursor (ver script.js).
+                -->
+                <div class="stack-grid" data-stagger>
+                    <article class="stack-card stack-card-wide spotlight" data-reveal>
+                        <header class="stack-card-head">
+                            <h3>Backend</h3>
+                            <span class="badge badge-blue">Principal</span>
+                        </header>
+                        <ul class="tech-grid">
+                            <li class="tech"><img src="icons/stack/java.svg" alt="" width="40" height="40" loading="lazy"><span>Java 17+</span></li>
+                            <li class="tech"><img src="icons/stack/spring.svg" alt="" width="40" height="40" loading="lazy"><span>Spring Boot</span></li>
+                            <li class="tech"><img src="icons/stack/hibernate.svg" alt="" width="40" height="40" loading="lazy"><span>Hibernate</span></li>
+                            <li class="tech"><img src="icons/stack/junit.svg" alt="" width="40" height="40" loading="lazy"><span>JUnit 5</span></li>
+                            <li class="tech"><img src="icons/stack/swagger.svg" alt="" width="40" height="40" loading="lazy"><span>OpenAPI</span></li>
+                            <li class="tech"><img src="icons/stack/maven.svg" alt="" width="40" height="40" loading="lazy"><span>Maven</span></li>
+                        </ul>
+                        <ul class="chips" aria-label="Também no backend">
+                            <li>Spring Security</li><li>Spring Data JPA</li><li>Bean Validation</li><li>Mockito</li><li>Lombok</li>
+                        </ul>
                     </article>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <article class="experience-card">
-                        <div class="card-body">
-                            <h3>Suporte de TI</h3>
-                            <div class="company-info">
-                                <span><img src="/img/starturbanismo.jpeg" alt="Ícone de empresa" width="80px">Start
-                                    Urbanismo</span>
-                                <span>| Janeiro 2024 à Junho 2025 - 1 ano 6 meses</span>
-                            </div>
-                            <ul>
-                                <li>Atendimento N1 e N2.</li>
-                                <li>Automação de Processos.</li>
-                                <li>Programação de interfaces e manutenção de sistemas ERP Sankhya.</li>
-                                <li>Consultas e manipulação de dados com Oracle SQL.</li>
-                                <li>Automação de fluxo de trabalho SAP.</li>
-                                <Li>Gestão de projetos.</Li>
-                                <li>Controles de registros de domínios, email e SSL</li>
-                                <li>Controle de usuários.</li>
-                                <li>Controle de de armazenamento em nuvem.</li>
-                            </ul>
-                        </div>
-                        <footer class="card-footer">
-                            <div class="card-tech-tags">
-                                <span class="tech-tag">Programação</span>
-                                <span class="tech-tag">Oracle SQL</span>
-                                <span class="tech-tag">Sankhya</span>
-                                <span class="tech-tag">HTML, CSS, JavaScript</span>
-                                <span class="tech-tag">Bitrix 24</span>
-                                <span class="tech-tag">Redes de computadores</span>
-                                <span class="tech-tag">Google Workspace</span>
-                                <span class="tech-tag">Hostgator</span>
-                                <span class="tech-tag">Superdomínios</span>
-                                <span class="tech-tag">DomÍnios BR</span>
-                                <span class="tech-tag">NexCloud</span>
-                                <span class="tech-tag">NethServer</span>
-                            </div>
-                        </footer>
+                    <article class="stack-card spotlight" data-reveal>
+                        <header class="stack-card-head">
+                            <h3>Banco de dados</h3>
+                        </header>
+                        <ul class="tech-grid tech-grid-2">
+                            <li class="tech"><img src="icons/stack/mysql.svg" alt="" width="40" height="40" loading="lazy"><span>MySQL</span></li>
+                            <li class="tech"><img src="icons/stack/postgresql.svg" alt="" width="40" height="40" loading="lazy"><span>PostgreSQL</span></li>
+                            <li class="tech"><img src="icons/stack/oracle.svg" alt="" width="40" height="40" loading="lazy"><span>Oracle SQL</span></li>
+                            <li class="tech"><img src="icons/stack/mongodb.svg" alt="" width="40" height="40" loading="lazy"><span>MongoDB</span></li>
+                        </ul>
+                        <ul class="chips" aria-label="Também em dados">
+                            <li>H2</li><li>Modelagem de dados</li>
+                        </ul>
                     </article>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <article class="experience-card">
-                        <div class="card-body">
-                            <h3>Estágio em TI</h3>
-                            <div class="company-info">
-                                <span><img src="/img/starturbanismo.jpeg" alt="Ícone de empresa" width="80px">Start
-                                    Ubanismo</span>
-                                <span id="date-company">| Agosto 2023 até Dezembro 2023 - 6 meses</span>
-                            </div>
-                            <ul>
-                                <li>Atendimento a chamados de usuários.</li>
-                                <li>Formatação de computadores.</li>
-                                <li>Configurações de estação de trabalho ao dominios.</li>
-                            </ul>
-                        </div>
-                        <footer class="card-footer">
-                            <div class="card-tech-tags">
-                                <span class="tech-tag">Manutenção de Hardwares.</span>
-                                <span class="tech-tag">Redes de Computadores.</span>
-                                <span class="tech-tag">Atendimento a usuário.</span>
-                                <span class="tech-tag">N1</span>
-                            </div>
-                        </footer>
+                    <article class="stack-card spotlight" data-reveal>
+                        <header class="stack-card-head">
+                            <h3>DevOps e ferramentas</h3>
+                        </header>
+                        <ul class="tech-grid tech-grid-2">
+                            <li class="tech"><img src="icons/stack/docker.svg" alt="" width="40" height="40" loading="lazy"><span>Docker</span></li>
+                            <li class="tech"><img src="icons/stack/kubernetes.svg" alt="" width="40" height="40" loading="lazy"><span>Kubernetes</span></li>
+                            <li class="tech"><img src="icons/stack/apachekafka.svg" alt="" width="40" height="40" loading="lazy"><span>Kafka</span></li>
+                            <li class="tech"><img src="icons/stack/git.svg" alt="" width="40" height="40" loading="lazy"><span>Git</span></li>
+                            <li class="tech"><img src="icons/stack/postman.svg" alt="" width="40" height="40" loading="lazy"><span>Postman</span></li>
+                            <li class="tech"><img src="icons/stack/gradle.svg" alt="" width="40" height="40" loading="lazy"><span>Gradle</span></li>
+                        </ul>
                     </article>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <article class="experience-card">
-                        <div class="card-body">
-                            <h3>BackOffice</h3>
-                            <div class="company-info">
-                                <span><img src="/img/clarobrasil.jpg" alt="Ícone de empresa" width="80px">Claro
-                                    Brasil</span>
-                                <span id="date-company">| Agosto 2023 até Dezembro 2023 - 6 meses</span>
-                            </div>
-                            <ul>
-                                <li>Gerenciamento de contratos</li>
-                                <li>Responsável por controlar dados, verificar registros, organizar documentos e
-                                    alimentar sistemas internos.</li>
-                                <li>Trata de solicitações internas, acompanha pedidos não finalizados e resolve
-                                    ocorrências que não foram concluídas pela equipe de atendimento. </li>
-                                <li>Fornece informações e suporte para os setores de atendimento, vendas e outras áreas
-                                    da empresa. </li>
-                            </ul>
-                        </div>
-                        <footer class="card-footer">
-                            <div class="card-tech-tags">
-                                <span class="tech-tag">Atendimento ao Cliente</span>
-                                <span class="tech-tag">Analisar chamadas</span>
-                                <span class="tech-tag">Elaboração de Relatórios</span>
-                                <span class="tech-tag">PacoteOffice</span>
-                                <span class="tech-tag">Adobe Reader</span>
-                            </div>
-                        </footer>
+
+                    <article class="stack-card spotlight" data-reveal>
+                        <header class="stack-card-head">
+                            <h3>Frontend</h3>
+                        </header>
+                        <ul class="tech-grid tech-grid-2">
+                            <li class="tech"><img src="icons/stack/html5.svg" alt="" width="40" height="40" loading="lazy"><span>HTML5</span></li>
+                            <li class="tech"><img src="icons/stack/css3.svg" alt="" width="40" height="40" loading="lazy"><span>CSS3</span></li>
+                            <li class="tech"><img src="icons/stack/javascript.svg" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li>
+                        </ul>
+                    </article>
+
+                    <article class="stack-card spotlight" data-reveal>
+                        <header class="stack-card-head">
+                            <h3>Como eu trabalho</h3>
+                        </header>
+                        <ul class="practices">
+                            <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Arquitetura em camadas</li>
+                            <li><svg aria-hidden="true"><use href="#i-check"></use></svg>SOLID e Clean Code</li>
+                            <li><svg aria-hidden="true"><use href="#i-check"></use></svg>DTOs e validação na entrada</li>
+                            <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Tratamento global de exceções</li>
+                            <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Testes unitários e de integração</li>
+                        </ul>
                     </article>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="education">
-        <div class="education-container">
-            <h2>Formação <span>Acadêmica</span></h2>
-            <p class="subtitle">Minha trajetória educacional e as qualificações que adquiri ao longo do tempo</p>
-        </div>
+        </section>
 
-        <div class="education-cards">
-            <!-- Card 1 -->
-            <article class="education-card">
-                <div class="card-body">
-                    <div class="icon">
-                        🎓
-                    </div>
-                    <h3>Bacharelado em Ciência da Computação</h3>
-                    <p class="school">Faculdade Anhaguera Uberlândia</p>
-                    <div class="school-info">
-                        <span>📅 2023 - 2026</span>
-                        <span>📍 Uberlândia , MG</span>
-                    </div>
-                    <p class="description">
-                        Formação completa em fundamentos da computação, algoritmos, estruturas de dados,
-                        engenharia de software e desenvolvimento de sistemas.
-                    </p>
-                    <span class="grade">Cursando</span>
+        <!-- ============================== PROJETOS ============================== -->
+        <section class="section section-alt" id="projetos" aria-labelledby="projetos-title">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 id="projetos-title">Projetos.</h2>
+                    <p class="section-sub">Uma seleção do que construí. O código de todos está no GitHub.</p>
+                </header>
+
+                <!-- Componente .project: imagem, título, problema, destaques técnicos, tags e link -->
+                <div class="projects-grid" data-stagger>
+                    <article class="project" data-reveal>
+                        <div class="project-media">
+                            <img src="img/img-projec-sistema-banco.png" alt="Diagrama da API bancária: clientes, agências, contas e transações" loading="lazy" decoding="async" width="640" height="360">
+                        </div>
+                        <div class="project-body">
+                            <h3>Sistema Bancário API</h3>
+                            <p class="project-problem">
+                                Simula as operações de um banco digital: clientes PF e PJ, agências, contas, depósitos e
+                                transferências, com extrato detalhado e imutável.
+                            </p>
+                            <ul class="project-points">
+                                <li>DTOs protegem a integridade dos dados expostos pela API</li>
+                                <li>Tratamento global de exceções e Bean Validation</li>
+                                <li>Testes com JUnit 5 e Mockito, documentação em OpenAPI</li>
+                            </ul>
+                            <ul class="chips chips-sm" aria-label="Tecnologias">
+                                <li>Java 17</li><li>Spring Boot 3</li><li>JPA</li><li>MySQL</li><li>Swagger</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/JoaoVitordeAssisFelipe/API-Sistema-Banc-rio" target="_blank" rel="noopener">
+                                Ver código <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-reveal>
+                        <div class="project-media">
+                            <img src="img/crm.png" alt="Logotipo do projeto CRM-Basic" loading="lazy" decoding="async" width="640" height="360">
+                        </div>
+                        <div class="project-body">
+                            <h3>CRM-Basic</h3>
+                            <p class="project-problem">
+                                Gestão de clientes e contatos, construída como referência de arquitetura em camadas com
+                                Spring Boot.
+                            </p>
+                            <ul class="project-points">
+                                <li>Controller, Service e Repository bem separados</li>
+                                <li>DTOs e validação com Jakarta Bean Validation</li>
+                                <li>Regras de negócio cobertas por testes unitários</li>
+                            </ul>
+                            <ul class="chips chips-sm" aria-label="Tecnologias">
+                                <li>Spring Boot 3</li><li>Spring Data JPA</li><li>H2</li><li>JUnit 5</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/JoaoVitordeAssisFelipe/BASIC-CRM-JAVA" target="_blank" rel="noopener">
+                                Ver código <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-reveal>
+                        <div class="project-media">
+                            <img src="img/mongodb.png" alt="Logotipo do MongoDB" loading="lazy" decoding="async" width="640" height="360">
+                        </div>
+                        <div class="project-body">
+                            <h3>Workshop Spring Boot e MongoDB</h3>
+                            <p class="project-problem">
+                                Usuários, postagens e comentários modelados em um banco orientado a documentos.
+                            </p>
+                            <ul class="project-points">
+                                <li>Modelagem de dados NoSQL</li>
+                                <li>Arquitetura em camadas sobre MongoDB</li>
+                            </ul>
+                            <ul class="chips chips-sm" aria-label="Tecnologias">
+                                <li>Java</li><li>Spring Boot</li><li>MongoDB</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/JoaoVitordeAssisFelipe/curso-workshop-springboot4-mongodb" target="_blank" rel="noopener">
+                                Ver código <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-reveal>
+                        <div class="project-media project-media-top">
+                            <img src="img/virtualClassroom.png" alt="Tela do projeto Virtual Classroom" loading="lazy" decoding="async" width="640" height="360">
+                        </div>
+                        <div class="project-body">
+                            <h3>Virtual Classroom</h3>
+                            <p class="project-problem">
+                                Aplicação full stack para gerenciar pessoas, turmas e notas de um ambiente escolar.
+                            </p>
+                            <ul class="project-points">
+                                <li>API Spring Boot consumida por frontend em JavaScript puro</li>
+                                <li>Persistência com Spring Data JPA</li>
+                            </ul>
+                            <ul class="chips chips-sm" aria-label="Tecnologias">
+                                <li>Java 21</li><li>Spring Boot 3</li><li>JPA / H2</li><li>JavaScript</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/JoaoVitordeAssisFelipe/VirtualClassroom" target="_blank" rel="noopener">
+                                Ver código <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                            </a>
+                        </div>
+                    </article>
                 </div>
-            </article>
 
-            <article class="education-card">
-                <div class="card-body">
-                    <div class="icon">
-                        🎓
-                    </div>
-                    <h3>Técnico em Desenvolvimento de Sistemas</h3>
-                    <p class="school">SENAI - Uberlândia</p>
-                    <div class="school-info">
-                        <span>📅 2021 - 2023</span>
-                        <span>📍 Uberlândia, MG</span>
-                    </div>
-                    <p class="description">
-                        Curso técnico com duração de 2 anos, que oferece uma base sólida para a criação,
-                        desenvolvimento e manutenção de sistemas. A grade curricular abrange lógica de programação,
-                        algoritmos, desenvolvimento back-end com APIs, front-end, e modelagem de banco de dados.
-                    </p>
-                    <span class="grade">Formado</span>
-                </div>
-            </article>
-        </div>
-    </section>
-    <section id="certifications">
-        <h2>Certificados</h2>
-
-        <div class="certification-cards">
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>Java Spring Boot</h3>
-                <p class="issuer">Alura</p>
-                <span class="year">2025</span>
-            </article>
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>Banco de Dados SQL</h3>
-                <p class="issuer">Udemy</p>
-                <span class="year">2025</span>
-            </article>
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>Lean Six Sigma White Belt</h3>
-                <p class="issuer">RL&Associados</p>
-                <span class="year">2024</span>
-            </article>
-
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>Power BI</h3>
-                <p class="issuer">Daxus</p>
-                <span class="year">2024</span>
-            </article>
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>Segurança em Tecnologia da Informação</h3>
-                <p class="issuer">Bradesco</p>
-                <span class="year">2021</span>
-            </article>
-
-            <article class="certification-card">
-                <div class="icon">🏅</div>
-                <h3>HTML, CSS, JAVASCRIPT</h3>
-                <p class="issuer">Kenzie Academy Brasil</p>
-                <span class="year">2021</span>
-            </article>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer id="rodape">
-        <div class="footer-container">
-            <!-- Sobre -->
-            <div class="footer-about">
-                <img src="/icons/coffee-cups.png" alt="Logo de uma xícara de café" width="50px">
-                <p>
-                    Desenvolvedor Java Back-end especializado em criar soluções robustas e escaláveis.
-                    Transformando ideias em código de qualidade.
-                </p>
-                <div class="footer-socials">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:jaovitordeassis@gmail.com"><i class="fas fa-envelope"></i></a>
+                <!-- Demais projetos em lista compacta -->
+                <div class="more-projects" data-reveal>
+                    <h3>Outros projetos</h3>
+                    <ul class="project-list">
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/LunarCorp" target="_blank" rel="noopener">
+                                <span class="pl-title">Lunar Corp</span>
+                                <span class="pl-desc">Gestão de chamados técnicos entre usuários e suporte.</span>
+                                <span class="pl-tech">Spring Boot · JPA</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/fullstack-todolist-java" target="_blank" rel="noopener">
+                                <span class="pl-title">To-Do List Full Stack</span>
+                                <span class="pl-desc">Lista de tarefas com testes de integração.</span>
+                                <span class="pl-tech">Spring Boot · MySQL</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/chess-system-java" target="_blank" rel="noopener">
+                                <span class="pl-title">Chess Match</span>
+                                <span class="pl-desc">Xadrez completo com as regras oficiais, feito com POO.</span>
+                                <span class="pl-tech">Java 17</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/MarketSystem/tree/main" target="_blank" rel="noopener">
+                                <span class="pl-title">Market System</span>
+                                <span class="pl-desc">API CRUD de produtos para um supermercado.</span>
+                                <span class="pl-tech">Spring Boot · MySQL</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/Banco-de-Dados-/tree/main" target="_blank" rel="noopener">
+                                <span class="pl-title">Registro de Acesso</span>
+                                <span class="pl-desc">Banco de dados para registros de catraca de uma escola.</span>
+                                <span class="pl-tech">PostgreSQL</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/Cinema" target="_blank" rel="noopener">
+                                <span class="pl-title">Gestão de Cinema</span>
+                                <span class="pl-desc">Salas, sessões e espectadores modelados com POO.</span>
+                                <span class="pl-tech">Java</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JoaoVitordeAssisFelipe/IMC-JavaSwing" target="_blank" rel="noopener">
+                                <span class="pl-title">Cálculo de IMC</span>
+                                <span class="pl-desc">Aplicação desktop acadêmica com interface em Swing.</span>
+                                <span class="pl-tech">Java · Swing</span>
+                                <svg class="pl-icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <!-- Contato -->
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p>📧 jaovitordeassis@gmail.com</p>
-                <a
-                    href="https://wa.me/+5534997669283?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Vitor!%20%0AEncontrei%20seu%20contato%20no%20seu%20portf%C3%B3lio%20e%20gostei%20muito%20dos%20seus%20projetos.%20Gostaria%20de%20conversar%20sobre%20seu%20perfil%20e%20poss%C3%ADveis%20oportunidades.">📱
-                    +55 (34) 99766-9283</a>
-                <p>📍 Uberlândia, MG</p>
+        <!-- ============================== EXPERIÊNCIA ============================== -->
+        <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 id="experiencia-title">Experiência.</h2>
+                    <p class="section-sub">Do suporte ao desenvolvimento: onde trabalhei e o que fiz em cada lugar.</p>
+                </header>
+
+                <!-- Resumo rápido antes do detalhe -->
+                <ul class="exp-summary" data-stagger>
+                    <li data-reveal><strong data-years-since="2023-08">3+</strong><span>anos em TI</span></li>
+                    <li data-reveal><strong>3</strong><span>empresas</span></li>
+                    <li data-reveal><strong>5</strong><span>cargos na área</span></li>
+                </ul>
+
+                <!--
+                    Linha do tempo. Cada .company agrupa um ou mais .role.
+                    data-start / data-end (AAAA-MM) alimentam o cálculo de duração no script.js.
+                -->
+                <div class="timeline" id="timeline">
+                    <span class="timeline-track" aria-hidden="true"><span class="timeline-progress"></span></span>
+
+                    <ol class="timeline-list">
+                        <!-- Start Urbanismo: empresa atual, 3 cargos (mais recente primeiro) -->
+                        <li class="company" data-reveal>
+                            <img class="company-logo" src="img/starturbanismo.jpeg" alt="" width="56" height="56" loading="lazy">
+                            <div class="company-card">
+                                <header class="company-head">
+                                    <div>
+                                        <h3>Start Urbanismo</h3>
+                                        <p class="company-meta">3 cargos · Ago 2023 – Jun 2025 e Mar 2026 – atual</p>
+                                    </div>
+                                    <span class="badge badge-green"><span class="live-dot" aria-hidden="true"></span>Atual</span>
+                                </header>
+
+                                <div class="role role-step">
+                                    <div class="role-head">
+                                        <h4>Analista de Sistemas</h4>
+                                        <div class="role-meta">
+                                            <span><svg aria-hidden="true"><use href="#i-calendar"></use></svg>Mar 2026 – atual</span>
+                                            <span data-start="2026-03"><svg aria-hidden="true"><use href="#i-clock"></use></svg><span class="duration-text">7 meses</span></span>
+                                        </div>
+                                    </div>
+                                    <p class="role-area">Desenvolvimento e Sustentação de Software</p>
+                                    <ul class="highlights">
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Aplicações Web</strong> construídas e mantidas com foco em alta disponibilidade e performance</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Integrações complexas</strong> via conexões de API e arquitetura de Webhooks</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Bug fixing</strong> e refatoração de sistemas legados</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Melhorias de sistema:</strong> novas features e otimizações de banco de dados, seguindo os padrões arquiteturais da empresa</span></li>
+                                    </ul>
+                                    <ul class="chips chips-sm" aria-label="Competências">
+                                        <li>Aplicações Web</li><li>APIs</li><li>Webhooks</li><li>Sistemas legados</li><li>Refatoração</li><li>Otimização de banco de dados</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role role-step">
+                                    <div class="role-head">
+                                        <h4>Suporte de TI</h4>
+                                        <div class="role-meta">
+                                            <span><svg aria-hidden="true"><use href="#i-calendar"></use></svg>Jan 2024 – Jun 2025</span>
+                                            <span data-start="2024-01" data-end="2025-06"><svg aria-hidden="true"><use href="#i-clock"></use></svg><span class="duration-text">1 ano e 6 meses</span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="highlights">
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>ERP Sankhya:</strong> programação de interfaces e manutenção do sistema</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Oracle SQL:</strong> consultas e manipulação de dados</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Automação</strong> de processos e de fluxos de trabalho SAP</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Infraestrutura:</strong> domínios, e-mail, SSL, usuários e nuvem</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Gestão de projetos</strong> e atendimento N1 e N2</span></li>
+                                    </ul>
+                                    <ul class="chips chips-sm" aria-label="Competências">
+                                        <li>Oracle SQL</li><li>Sankhya</li><li>SAP</li><li>HTML, CSS e JS</li><li>Bitrix24</li><li>Google Workspace</li><li>NethServer</li>
+                                    </ul>
+                                </div>
+
+                                <div class="role role-step">
+                                    <div class="role-head">
+                                        <h4>Estágio em TI</h4>
+                                        <div class="role-meta">
+                                            <span><svg aria-hidden="true"><use href="#i-calendar"></use></svg>Ago 2023 – Dez 2023</span>
+                                            <span data-start="2023-08" data-end="2023-12"><svg aria-hidden="true"><use href="#i-clock"></use></svg><span class="duration-text">5 meses</span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="highlights">
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Atendimento</strong> de chamados de usuários</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Formatação</strong> e configuração de estações no domínio</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <!-- DSS -->
+                        <li class="company" data-reveal>
+                            <img class="company-logo" src="img/DSS.jpeg" alt="" width="56" height="56" loading="lazy">
+                            <div class="company-card">
+                                <header class="company-head">
+                                    <div>
+                                        <h3>DSS Tecnologia da Informação</h3>
+                                        <p class="company-meta">Prestação de serviço para a Receita Federal do Brasil</p>
+                                    </div>
+                                </header>
+
+                                <div class="role">
+                                    <div class="role-head">
+                                        <h4>Suporte de TI N2</h4>
+                                        <div class="role-meta">
+                                            <span><svg aria-hidden="true"><use href="#i-calendar"></use></svg>Jun 2025 – Mar 2026</span>
+                                            <span data-start="2025-06" data-end="2026-03"><svg aria-hidden="true"><use href="#i-clock"></use></svg><span class="duration-text">10 meses</span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="highlights">
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Suporte especializado</strong> à Divisão de Tecnologia e Segurança da Informação (DITEC)</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Implantação</strong> e configuração de estações de trabalho e softwares</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Diagnóstico</strong> de hardware e de problemas de rede</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Incidentes e requisições</strong> tratados via sistema de chamados</span></li>
+                                    </ul>
+                                    <ul class="chips chips-sm" aria-label="Competências">
+                                        <li>Redes</li><li>Hardware</li><li>Segurança da Informação</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Claro -->
+                        <li class="company" data-reveal>
+                            <img class="company-logo" src="img/clarobrasil.jpg" alt="" width="56" height="56" loading="lazy">
+                            <div class="company-card">
+                                <header class="company-head">
+                                    <div>
+                                        <h3>Claro Brasil</h3>
+                                        <p class="company-meta">Telecomunicações</p>
+                                    </div>
+                                </header>
+
+                                <div class="role">
+                                    <div class="role-head">
+                                        <h4>Backoffice</h4>
+                                        <div class="role-meta">
+                                            <span><svg aria-hidden="true"><use href="#i-calendar"></use></svg>Ago 2023 – Dez 2023</span>
+                                            <span data-start="2023-08" data-end="2023-12"><svg aria-hidden="true"><use href="#i-clock"></use></svg><span class="duration-text">5 meses</span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="highlights">
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Gestão de contratos</strong>, verificação de registros e alimentação de sistemas internos</span></li>
+                                        <li><svg aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Tratamento de pendências</strong> e suporte às equipes de atendimento e vendas</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
             </div>
+        </section>
 
-            <!-- Links -->
-            <div class="footer-links">
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#experience">Experiência</a></li>
-                    <li><a href="#education">Formação</a></li>
+        <!-- ============================== FORMAÇÃO ============================== -->
+        <section class="section section-alt" id="formacao" aria-labelledby="formacao-title">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 id="formacao-title">Formação.</h2>
+                    <p class="section-sub">A base acadêmica e os cursos que complementam a prática.</p>
+                </header>
+
+                <div class="edu-grid" data-stagger>
+                    <article class="edu" data-reveal>
+                        <div class="edu-top">
+                            <img class="edu-logo" src="img/anhaguera.png" alt="" width="64" height="64" loading="lazy">
+                            <span class="badge badge-green"><svg aria-hidden="true"><use href="#i-check"></use></svg>Concluído</span>
+                        </div>
+                        <h3>Bacharelado em Ciência da Computação</h3>
+                        <p class="edu-school">Faculdade Anhanguera · Uberlândia, MG</p>
+
+                        <!-- Para um curso em andamento, use data-start/data-end (AAAA-MM): o script.js calcula o progresso -->
+                        <div class="edu-progress is-complete">
+                            <div class="edu-progress-labels">
+                                <span>2023</span>
+                                <span class="edu-progress-value">Formado em jul 2026</span>
+                                <span>2026</span>
+                            </div>
+                            <div class="edu-progress-track"><span class="edu-progress-fill" style="--p: 100%"></span></div>
+                        </div>
+
+                        <ul class="chips chips-sm" aria-label="Principais disciplinas">
+                            <li>Algoritmos</li><li>Estruturas de dados</li><li>Engenharia de software</li><li>Desenvolvimento de sistemas</li>
+                        </ul>
+                    </article>
+
+                    <article class="edu" data-reveal>
+                        <div class="edu-top">
+                            <img class="edu-logo" src="img/senai.jpg" alt="" width="64" height="64" loading="lazy">
+                            <span class="badge badge-green"><svg aria-hidden="true"><use href="#i-check"></use></svg>Concluído</span>
+                        </div>
+                        <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                        <p class="edu-school">SENAI · Uberlândia, MG</p>
+
+                        <div class="edu-progress is-complete">
+                            <div class="edu-progress-labels">
+                                <span>2021</span>
+                                <span class="edu-progress-value">2 anos</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="edu-progress-track"><span class="edu-progress-fill" style="--p: 100%"></span></div>
+                        </div>
+
+                        <ul class="chips chips-sm" aria-label="Principais disciplinas">
+                            <li>Lógica de programação</li><li>APIs back-end</li><li>Front-end</li><li>Modelagem de banco de dados</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!--
+                    Certificações: cada <li> tem data-cat (java | dados | gestao | inovacao).
+                    O script.js monta as contagens, filtra por categoria e limita a lista inicial.
+                    Para adicionar um certificado, copie um <li> e mantenha a ordem do mais recente para o mais antigo.
+                -->
+                <div class="certs" id="certs">
+                    <div class="certs-head" data-reveal>
+                        <h3>Certificações <span class="certs-total">23</span></h3>
+                        <div class="segmented" role="group" aria-label="Filtrar certificações por categoria">
+                        <button type="button" data-filter="all" aria-pressed="true">Todas <span class="seg-count" data-count="all"></span></button>
+                        <button type="button" data-filter="java" aria-pressed="false">Java e Backend <span class="seg-count" data-count="java"></span></button>
+                        <button type="button" data-filter="dados" aria-pressed="false">Dados e Infraestrutura <span class="seg-count" data-count="dados"></span></button>
+                        <button type="button" data-filter="gestao" aria-pressed="false">Gestão e Processos <span class="seg-count" data-count="gestao"></span></button>
+                        <button type="button" data-filter="inovacao" aria-pressed="false">IA, Web e Inovação <span class="seg-count" data-count="inovacao"></span></button>
+                        </div>
+                    </div>
+
+                    <ul class="cert-grid" id="cert-list">
+                        <li class="cert cert-gestao" data-cat="gestao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-target"></use></svg></span>
+                            <span class="cert-name">Lean Six Sigma Yellow Belt</span>
+                            <span class="cert-meta">FM2S Educação e Consultoria · jun 2026</span>
+                        </li>
+                        <li class="cert cert-inovacao" data-cat="inovacao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+                            <span class="cert-name">Fluência em Inteligência Artificial</span>
+                            <span class="cert-meta">Fundação Bradesco · jun 2026</span>
+                        </li>
+                        <li class="cert cert-inovacao" data-cat="inovacao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+                            <span class="cert-name">Design Thinking para Educadores</span>
+                            <span class="cert-meta">Fundação Bradesco · mai 2026</span>
+                        </li>
+                        <li class="cert cert-gestao" data-cat="gestao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-target"></use></svg></span>
+                            <span class="cert-name">Fundamentos da Gestão de Projetos</span>
+                            <span class="cert-meta">FM2S Educação e Consultoria · mai 2026</span>
+                        </li>
+                        <li class="cert cert-dados" data-cat="dados" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-database"></use></svg></span>
+                            <span class="cert-name">Redes e Protocolos</span>
+                            <span class="cert-meta">Alura · abr 2026</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Java Completo: Programação Orientada a Objetos + Projetos</span>
+                            <span class="cert-meta">Udemy · fev 2026</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: Orientação a Objetos com classes, atributos e métodos</span>
+                            <span class="cert-meta">Alura · nov 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Java: trabalhando com lambdas, streams e Spring Framework</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: coleções e streams</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: Strings e Regex</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: data e hora</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: laços for e while</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: condicionais if e else</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Praticando Java: variáveis e tipos</span>
+                            <span class="cert-meta">Alura · out 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Java: consumindo API, gravando arquivos e lidando com erros</span>
+                            <span class="cert-meta">Alura · jul 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Java: trabalhando com listas e coleções de dados</span>
+                            <span class="cert-meta">Alura · jun 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Java: criando a sua primeira aplicação</span>
+                            <span class="cert-meta">Alura · mai 2025</span>
+                        </li>
+                        <li class="cert cert-dados" data-cat="dados" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-database"></use></svg></span>
+                            <span class="cert-name">Banco de Dados SQL do zero ao avançado</span>
+                            <span class="cert-meta">Udemy · fev 2025</span>
+                        </li>
+                        <li class="cert cert-java" data-cat="java" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-code"></use></svg></span>
+                            <span class="cert-name">Introdução ao Java Cloud Native com o Bradesco</span>
+                            <span class="cert-meta">DIO · fev 2025</span>
+                        </li>
+                        <li class="cert cert-gestao" data-cat="gestao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-target"></use></svg></span>
+                            <span class="cert-name">Lean Six Sigma White Belt</span>
+                            <span class="cert-meta">RL&amp;Associados · 2024</span>
+                        </li>
+                        <li class="cert cert-dados" data-cat="dados" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-database"></use></svg></span>
+                            <span class="cert-name">Power BI</span>
+                            <span class="cert-meta">Daxus · jan 2024</span>
+                        </li>
+                        <li class="cert cert-dados" data-cat="dados" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-database"></use></svg></span>
+                            <span class="cert-name">Segurança em Tecnologia da Informação</span>
+                            <span class="cert-meta">Bradesco · 2021</span>
+                        </li>
+                        <li class="cert cert-inovacao" data-cat="inovacao" data-reveal>
+                            <span class="cert-icon"><svg aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+                            <span class="cert-name">HTML, CSS e JavaScript</span>
+                            <span class="cert-meta">Kenzie Academy · 2021</span>
+                        </li>
+                    </ul>
+
+                    <div class="certs-more">
+                        <button type="button" class="btn-link" id="cert-more" aria-controls="cert-list" aria-expanded="false" hidden>Mostrar todas</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== CONTATO ============================== -->
+        <section class="section contact" id="contato" aria-labelledby="contato-title">
+            <div class="container">
+                <header class="section-head section-head-center" data-reveal>
+                    <h2 id="contato-title">Vamos conversar.</h2>
+                    <p class="section-sub">Aberto a conversas e novas oportunidades em desenvolvimento backend. E-mail e LinkedIn são as formas mais rápidas de falar comigo.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:jaovitordeassis@gmail.com" class="btn btn-primary">Enviar e-mail</a>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-felipe-929820198/" class="btn-link" target="_blank" rel="noopener">
+                            LinkedIn <svg class="icon-sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                        </a>
+                    </div>
+                </header>
+
+                <ul class="contact-list" data-stagger>
+                    <li data-reveal>
+                        <a href="mailto:jaovitordeassis@gmail.com">
+                            <span class="contact-icon"><svg aria-hidden="true"><use href="#i-mail"></use></svg></span>
+                            <span><small>E-mail</small>jaovitordeassis@gmail.com</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-felipe-929820198/" target="_blank" rel="noopener">
+                            <span class="contact-icon"><svg aria-hidden="true"><use href="#i-linkedin"></use></svg></span>
+                            <span><small>LinkedIn</small>joão-vitor-felipe</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://wa.me/5534997669283?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Vitor!%20%0AEncontrei%20seu%20contato%20no%20seu%20portf%C3%B3lio%20e%20gostei%20muito%20dos%20seus%20projetos.%20Gostaria%20de%20conversar%20sobre%20seu%20perfil%20e%20poss%C3%ADveis%20oportunidades." target="_blank" rel="noopener">
+                            <span class="contact-icon"><svg aria-hidden="true"><use href="#i-phone"></use></svg></span>
+                            <span><small>WhatsApp</small>+55 (34) 99766-9283</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://github.com/JoaoVitordeAssisFelipe" target="_blank" rel="noopener">
+                            <span class="contact-icon"><svg aria-hidden="true"><use href="#i-github"></use></svg></span>
+                            <span><small>GitHub</small>JoaoVitordeAssisFelipe</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
+        </section>
+    </main>
+
+    <!-- ============================== RODAPÉ ============================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Copyright © <span id="year">2026</span> João Vitor. Uberlândia, MG.</p>
+            <nav class="footer-nav" aria-label="Rodapé">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#inicio">Voltar ao topo</a>
+            </nav>
         </div>
     </footer>
 
-    <script src="/src/script.js"></script>
+    <script src="src/script.js" defer></script>
 </body>
 
 </html>
